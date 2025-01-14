@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cereal Nutritivo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background-color: #eae8e3;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            color: #6b4f4f;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #9c8a8a;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            font-size: 2em;
+            color: #6b4f4f;
+            margin-bottom: 10px;
+        }
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .image-row {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .image-row img {
+            width: 30%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        form button {
+            background-color: #6b4f4f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #563c3c;
+        }
+        footer {
+            background-color: #eae8e3;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 1em;
+            color: #6b4f4f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cereal Nutritivo</h1>
+        <p>El poder de la quinoa y la kiwicha para combatir la anemia</p>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>¿Por qué elegir nuestro cereal?</h2>
+            <p>Nuestro cereal combina el alto valor nutricional de la quinoa y la kiwicha, dos superalimentos peruanos,
+            para ofrecer una solución deliciosa y efectiva en la lucha contra la anemia.</p>
+        </section>
+
+        <section class="section">
+            <h2>Beneficios</h2>
+            <ul>
+                <li>Rico en hierro, vitaminas y minerales esenciales.</li>
+                <li>Fomenta un sistema inmunológico saludable.</li>
+                <li>Ideal para todas las edades.</li>
+                <li>Contribuye a una dieta balanceada y energética.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Galería</h2>
+            <div class="image-row">
+                <img src="https://via.placeholder.com/300" alt="Quinoa">
+                <img src="https://via.placeholder.com/300" alt="Kiwicha">
+                <img src="https://via.placeholder.com/300" alt="Cereal saludable">
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Contacto</h2>
+            <p><strong>Teléfono:</strong> +51 942998133</p>
+            <p><strong>Correo:</strong> <a href="mailto:nutricrunch@gmail.com">nutricrunch@gmail.com</a></p>
+            <form action="#">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Cereal Nutritivo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
