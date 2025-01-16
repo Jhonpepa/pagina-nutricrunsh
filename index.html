@@ -9,13 +9,15 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f8ff; /* Suave tono azul claro */
+            background-color: #f9f5eb; /* Tono pastel beige */
             color: #333;
         }
         header {
-            background-color: #ffcc99; /* Tono durazno claro */
-            text-align: center;
-            padding: 20px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #d4e6c7; /* Verde suave */
+            padding: 10px 20px;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -23,112 +25,150 @@
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
-            color: #663300; /* Marrón oscuro */
+            font-size: 1.8em;
+            color: #6c8b48; /* Verde más oscuro */
+        }
+        header img {
+            height: 50px;
         }
         nav {
-            margin-top: 10px;
+            display: flex;
+            gap: 15px;
         }
         nav a {
-            margin: 0 15px;
             text-decoration: none;
-            color: #663300;
+            color: #6c8b48;
             font-weight: bold;
             font-size: 1.1em;
         }
         nav a:hover {
-            color: #996633; /* Marrón claro */
+            color: #486030; /* Verde más intenso */
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .hero img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+        .hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .hero .overlay h2 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #fff;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .hero .overlay p {
+            font-size: 1.2em;
+            margin-top: 10px;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
         }
-        .section {
-            margin-bottom: 40px;
-        }
-        .section h2 {
-            font-size: 2em;
-            color: #663300;
-            margin-bottom: 10px;
-        }
-        .section p {
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
-        .image-row {
+        .product-section {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             flex-wrap: wrap;
-            justify-content: center;
         }
-        .image-row img {
-            width: calc(33% - 10px);
+        .product {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+        .product p {
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
         footer {
-            background-color: #ffcc99;
+            background-color: #d4e6c7;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
             margin-top: 20px;
         }
         footer p {
             margin: 0;
             font-size: 1em;
-            color: #663300;
+            color: #6c8b48;
         }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #663300;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 1em;
-            transition: background-color 0.3s;
+        .social-icons {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
         }
-        .button:hover {
-            background-color: #996633;
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+        .cart {
+            position: absolute;
+            left: 10px;
+            top: 10px;
         }
     </style>
 </head>
 <body>
     <header>
+        <img src="logo.png" alt="Logo Nutricrunch">
         <h1>Cereal Nutritivo Nutricrunch</h1>
         <nav>
             <a href="#empresa">Sobre Nosotros</a>
-            <a href="#productos">Productos</a>
+            <a href="#producto">Producto</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
+    <div class="hero">
+        <img src="agricultores.jpg" alt="Agricultores trabajando la tierra">
+        <div class="overlay">
+            <h2>Nutritivo, Sostenible y Accesible</h2>
+            <p>Elaborado con insumos agrícolas y naturales</p>
+        </div>
+    </div>
+
     <div class="container">
-        <section id="empresa" class="section">
-            <h2>Sobre Nosotros</h2>
-            <p>Somos una empresa comprometida con la salud y la nutrición, utilizando los mejores superalimentos peruanos: la quinoa y la kiwicha. Nuestro objetivo es ofrecer productos deliciosos y nutritivos que ayuden a combatir la anemia y mejoren la calidad de vida.</p>
-        </section>
-
-        <section id="productos" class="section">
-            <h2>Productos</h2>
-            <p>Explora nuestra línea de cereales nutritivos:</p>
-            <div class="image-row">
-                <img src="logo.png" alt="Logo Nutricrunch">
-                <img src="producto.png" alt="Barra de cereal Nutricrunch">
+        <section id="producto" class="product-section">
+            <div class="product">
+                <img src="quinoa_kiwicha.jpg" alt="Insumos: Quinoa y Kiwicha">
+                <p>La quinoa y la kiwicha son superalimentos ricos en nutrientes esenciales.</p>
             </div>
-        </section>
-
-        <section id="contacto" class="section">
-            <h2>Contacto</h2>
-            <p>Para consultas o pedidos, contáctanos:</p>
-            <p><strong>Teléfono:</strong> +51 942998133</p>
-            <p><strong>Correo:</strong> <a href="mailto:nutricrunch@gmail.com">nutricrunch@gmail.com</a></p>
-            <a href="#" class="button">Envíanos un mensaje</a>
+            <div class="product">
+                <img src="producto.png" alt="Barra de cereal Nutricrunch">
+                <p>Una barra deliciosa y saludable para toda la familia.</p>
+            </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 Cereal Nutritivo Nutricrunch. Todos los derechos reservados.</p>
+        <p>Jr. Los Jazmines 149, Los Olivos, Lima, Perú</p>
+        <div class="social-icons">
+            <img src="whatsapp.png" alt="WhatsApp">
+            <img src="facebook.png" alt="Facebook">
+            <img src="instagram.png" alt="Instagram">
+        </div>
     </footer>
 </body>
 </html>
