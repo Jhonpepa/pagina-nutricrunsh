@@ -9,14 +9,14 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f4e3; /* Verde pastel */
-            color: #6c8b48; /* Verde más oscuro */
+            background-color: #f4f1e1; /* Fondo beige suave */
+            color: #4b5c46; /* Gris verdoso oscuro para mejor contraste */
         }
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #d8f7e5; /* Verde pastel claro */
+            background-color: #b8d8b1; /* Verde pastel suave */
             padding: 10px 20px;
             position: sticky;
             top: 0;
@@ -25,8 +25,8 @@
         }
         header h1 {
             margin: 0;
-            font-size: 1.8em;
-            color: #5b8a39; /* Verde más oscuro */
+            font-size: 2em;
+            color: #5e6c47; /* Verde oliva oscuro */
         }
         header img {
             height: 50px;
@@ -37,43 +37,27 @@
         }
         nav a {
             text-decoration: none;
-            color: #5b8a39;
+            color: #5e6c47;
             font-weight: bold;
             font-size: 1.1em;
         }
         nav a:hover {
-            color: #486030; /* Verde más intenso */
+            color: #3a4f33; /* Verde más oscuro para hover */
         }
         .hero {
             position: relative;
             text-align: center;
             color: white;
+            padding: 20px;
+            background-color: #c1e6b1; /* Verde pastel claro */
         }
-        .hero img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            opacity: 0.8;
-        }
-        .hero .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .hero .overlay h2 {
-            font-size: 2.5em;
+        .hero h2 {
+            font-size: 3em;
             margin: 0;
-            color: #fff;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
         }
-        .hero .overlay p {
-            font-size: 1.2em;
+        .hero p {
+            font-size: 1.5em;
             margin-top: 10px;
         }
         .container {
@@ -83,61 +67,78 @@
         }
         .description {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            background-color: #e0c8b8; /* Fondo marrón suave */
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .description h2 {
+            color: #5d3d0c; /* Marrón oscuro */
+            font-size: 2em;
         }
         .description p {
             font-size: 1.2em;
-            color: #5d3d0c; /* Marrón pastel */
+            color: #4e3a2c; /* Marrón más suave */
+            line-height: 1.6;
         }
         .product-section {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
         }
         .product {
             flex: 1;
             min-width: 280px;
             text-align: center;
+            background-color: #e4d7c3; /* Fondo marrón pastel */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
         }
         .product img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .product p {
             margin-top: 10px;
             font-size: 1.1em;
-            color: #5d3d0c; /* Marrón pastel */
+            color: #5d3d0c; /* Marrón oscuro */
         }
         footer {
-            background-color: #d8f7e5; /* Verde pastel claro */
+            background-color: #b8d8b1; /* Verde pastel suave */
             text-align: center;
-            padding: 20px;
-            margin-top: 20px;
+            padding: 30px;
+            margin-top: 40px;
+            color: #4b5c46;
         }
         footer p {
             margin: 5px 0;
             font-size: 1em;
-            color: #5b8a39; /* Verde oscuro */
         }
         footer a {
             text-decoration: none;
-            color: #5b8a39;
+            color: #5e6c47;
         }
         footer a:hover {
-            color: #486030;
+            color: #3a4f33;
         }
         .social-icons {
-            margin-top: 10px;
+            margin-top: 20px;
             display: flex;
             justify-content: center;
             gap: 15px;
         }
         .social-icons img {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
         }
         .cart {
             position: absolute;
@@ -158,11 +159,8 @@
     </header>
 
     <div class="hero">
-        <img src="agricultores.jpg" alt="Agricultores trabajando la tierra">
-        <div class="overlay">
-            <h2>Nutritivo, Sostenible y Accesible</h2>
-            <p>Elaborado con insumos agrícolas y naturales</p>
-        </div>
+        <h2>Nutritivo, Sostenible y Accesible</h2>
+        <p>Elaborado con insumos agrícolas y naturales</p>
     </div>
 
     <div class="container">
@@ -189,4 +187,11 @@
         <p>Email: <a href="mailto:nutricrunch@gmail.com">nutricrunch@gmail.com</a></p>
         <p><a href="https://www.facebook.com/CerealNutricrunchPeru/?locale=es_LA">Facebook</a></p>
         <div class="social-icons">
-            <img src="whats
+            <img src="whatsapp.png" alt="WhatsApp">
+            <img src="facebook.png" alt="Facebook">
+            <img src="instagram.png" alt="Instagram">
+        </div>
+    </footer>
+</body>
+</html>
+
