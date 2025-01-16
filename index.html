@@ -1,118 +1,197 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cereal Nutritivo Nutricrunch</title>
-  <style>
-    /* Colores */
-    body {
-      background-color: #f5f2e8; /* Crema */
-    }
-    header {
-      background-color: #d7ccc8; /* Beige claro */
-    }
-    .hero {
-      background-color: #c2e0b4; /* Verde claro */
-    }
-    .description,
-    .product {
-      background-color: #e7d9c8; /* Beige */
-    }
-    footer {
-      background-color: #d7ccc8; /* Beige claro */
-    }
-
-    /* Tipografía */
-    h1,
-    h2,
-    h3 {
-      font-family: 'Merienda One', cursive;
-    }
-    p {
-      font-family: Arial, sans-serif;
-    }
-
-    /* Header */
-    header nav a {
-      color: #795545; /* Marrón oscuro */
-    }
-    header nav a:hover {
-      color: #5d4031; /* Marrón más oscuro */
-    }
-
-    /* Hero */
-    .hero h2 {
-      color: #333; /* Negro */
-    }
-
-    /* Description */
-    .description h2 {
-      color: #795545; /* Marrón oscuro */
-    }
-
-    /* Productos */
-    .product-section {
-      justify-content: space-around; /* Mejor distribución */
-    }
-    .product p {
-      color: #795545; /* Marrón oscuro */
-    }
-
-    /* Footer */
-    footer p,
-    footer a {
-      color: #5d4031; /* Marrón más oscuro */
-    }
-    footer a:hover {
-      color: #333; /* Negro */
-    }
-
-    /* Imagenes */
-    .product img {
-      border-radius: 10px; /* Bordes redondeados */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cereal Nutritivo Nutricrunch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f1e1; /* Fondo beige suave */
+            color: #4b5c46; /* Gris verdoso oscuro para mejor contraste */
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #b8d8b1; /* Verde pastel suave */
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #5e6c47; /* Verde oliva oscuro */
+        }
+        header img {
+            height: 50px;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #5e6c47;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            color: #3a4f33; /* Verde más oscuro para hover */
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            background-color: #c1e6b1; /* Verde pastel claro */
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .description {
+            text-align: center;
+            margin-bottom: 40px;
+            background-color: #e0c8b8; /* Fondo marrón suave */
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .description h2 {
+            color: #5d3d0c; /* Marrón oscuro */
+            font-size: 2em;
+        }
+        .description p {
+            font-size: 1.2em;
+            color: #4e3a2c; /* Marrón más suave */
+            line-height: 1.6;
+        }
+        .product-section {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .product {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+            background-color: #e4d7c3; /* Fondo marrón pastel */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .product p {
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #5d3d0c; /* Marrón oscuro */
+        }
+        footer {
+            background-color: #b8d8b1; /* Verde pastel suave */
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            color: #4b5c46;
+        }
+        footer p {
+            margin: 5px 0;
+            font-size: 1em;
+        }
+        footer a {
+            text-decoration: none;
+            color: #5e6c47;
+        }
+        footer a:hover {
+            color: #3a4f33;
+        }
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+        }
+        .cart {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Cereal Nutritivo Nutricrunch</h1>
-    <nav>
-      <a href="#empresa">Sobre Nosotros</a>
-      <a href="#producto">Producto</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
+    <header>
+        <img src="logo.png" alt="Logo Nutricrunch">
+        <h1>Cereal Nutritivo Nutricrunch</h1>
+        <nav>
+            <a href="#empresa">Sobre Nosotros</a>
+            <a href="#producto">Producto</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
 
-  <div class="hero">
-    <h2>Nutritivo, Sostenible y Accesible</h2>
-    <p>Elaborado con insumos agrícolas y naturales</p>
-  </div>
+    <div class="hero">
+        <h2>Nutritivo, Sostenible y Accesible</h2>
+        <p>Elaborado con insumos agrícolas y naturales</p>
+    </div>
 
-  <div class="container">
-    <section id="empresa" class="description">
-      <h2>Sobre Nosotros</h2>
-      <p>Somos una empresa peruana que lleva la nutrición a otro nivel. Nuestras barras de cereal, hechas con quinoa y kiwicha, son una deliciosa fuente de energía y nutrientes esenciales. ¡Descubre el sabor de lo saludable!</p>
-    </section>
+    <div class="container">
+        <section id="empresa" class="description">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos una empresa peruana que lleva la nutrición a otro nivel. Nuestras barras de cereal, hechas con quinoa y kiwicha, son una deliciosa fuente de energía y nutrientes esenciales. ¡Descubre el sabor de lo saludable!</p>
+        </section>
 
-    <section id="producto" class="product-section">
-      <div class="product">
-        <img src="quinoa_kiwicha.jpg" alt="Insumos: Quinoa y Kiwicha">
-        <p>La quinoa y la kiwicha son superalimentos ricos en nutrientes esenciales.</p>
-      </div>
-      <div class="product">
-        <img src="Gemini_Generated_Image_5ep3r35ep3r35ep3.jpg" alt="Barra de cereal Nutricrunch">
-        <p>Una barra deliciosa y saludable para toda la familia.</p>
-      </div>
-    </section>
-  </div>
+        <section id="producto" class="product-section">
+            <div class="product">
+                <img src="quinoa_kiwicha.jpg" alt="Insumos: Quinoa y Kiwicha">
+                <p>La quinoa y la kiwicha son superalimentos ricos en nutrientes esenciales.</p>
+            </div>
+            <div class="product">
+                <img src="Gemini_Generated_Image_5ep3r35ep3r35ep3.jpg" alt="Barra de cereal Nutricrunch">
+                <p>Una barra deliciosa y saludable para toda la familia.</p>
+            </div>
+        </section>
+    </div>
 
-  <footer>
-    <p>Jr. Los Jazmines 149, Los Olivos, Lima, Perú</p>
-    <p>Teléfono: +51 947993182</p>
-    <p>Email: <a href="mailto:nutricrunch@gmail.com">nutricrunch@gmail.com</a></p>
-    <p><a href="https://www.facebook.com/CerealNutricrunchPeru/?locale=es_LA">Facebook</a></p>
-    <div class="social-icons">
-      <img src="whatsapp.png" alt="WhatsApp">
-      <img src="facebook.png" alt="Facebook">
-      <img
+    <footer>
+        <p>Jr. Los Jazmines 149, Los Olivos, Lima, Perú</p>
+        <p>Teléfono: +51 947993182</p>
+        <p>Email: <a href="mailto:nutricrunch@gmail.com">nutricrunch@gmail.com</a></p>
+        <p><a href="https://www.facebook.com/CerealNutricrunchPeru/?locale=es_LA">Facebook</a></p>
+        <div class="social-icons">
+            <img src="whatsapp.png" alt="WhatsApp">
+            <img src="facebook.png" alt="Facebook">
+            <img src="instagram.png" alt="Instagram">
+        </div>
+    </footer>
+</body>
+</html>
+
