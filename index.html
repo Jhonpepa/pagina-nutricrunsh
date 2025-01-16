@@ -9,14 +9,14 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f5eb; /* Tono pastel beige */
+            background-color: #f7efe9; /* Marrón claro pastel */
             color: #333;
         }
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #d4e6c7; /* Verde suave */
+            background-color: #e5f4e3; /* Verde claro pastel */
             padding: 10px 20px;
             position: sticky;
             top: 0;
@@ -81,6 +81,14 @@
             margin: 20px auto;
             padding: 20px;
         }
+        .description {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .description p {
+            font-size: 1.2em;
+            color: #5d3d0c; /* Marrón claro */
+        }
         .product-section {
             display: flex;
             gap: 20px;
@@ -103,13 +111,13 @@
             font-size: 1.1em;
         }
         footer {
-            background-color: #d4e6c7;
+            background-color: #e5f4e3;
             text-align: center;
             padding: 20px;
             margin-top: 20px;
         }
         footer p {
-            margin: 0;
+            margin: 5px 0;
             font-size: 1em;
             color: #6c8b48;
         }
@@ -150,6 +158,12 @@
     </div>
 
     <div class="container">
+        <section id="empresa" class="description">
+            <h2>Sobre Nosotros</h2>
+            <p>Nutricrunch transforma los superalimentos quinoa y kiwicha en una deliciosa barra de cereal, 
+            brindando nutrición natural y sostenible para toda la familia.</p>
+        </section>
+
         <section id="producto" class="product-section">
             <div class="product">
                 <img src="quinoa_kiwicha.jpg" alt="Insumos: Quinoa y Kiwicha">
@@ -164,6 +178,9 @@
 
     <footer>
         <p>Jr. Los Jazmines 149, Los Olivos, Lima, Perú</p>
+        <p>Teléfono: +51 947993182</p>
+        <p>Email: <a href="mailto:nutricrunch@gmail.com">nutricrunch@gmail.com</a></p>
+        <p><a href="https://www.facebook.com/CerealNutricrunchPeru/?locale=es_LA">Facebook</a></p>
         <div class="social-icons">
             <img src="whatsapp.png" alt="WhatsApp">
             <img src="facebook.png" alt="Facebook">
